@@ -1,5 +1,14 @@
 function Balance(){
-  return (
-    <h1>Balance</h1>
+  const ctx = React.useContext(UserContext);
+
+  return(
+  <Card
+  bgcolor="success"
+  header="Balance"
+  body={ (
+    <p>{ctx.users[0].balance}</p>
+      )
+    }
+    />
   )
 }

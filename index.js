@@ -1,11 +1,11 @@
 function Spa() {
-  return (
+ 
+      return (
       <HashRouter>
-      <NavBar/>
-      <UserContext.Provider value={{users:[{name:'client',email:'newclient@gmail.com',password:'secret',balance:500}]}}>              
+      <NavBar />
+      <UserContext.Provider value={{users:[{name:'client',email:'newclient@gmail.com',password:'secret',balance:100}]}}>              
         <Route path="/" exact component={Home} />
-        <Route path="/CreateAccount/" component={CreateAccount} />
-        <Route path="/login/" component={Login} />
+        <Route path="/createaccount/" component={CreateAccount} />
         <Route path="/deposit/" component={Deposit} />
         <Route path="/withdraw/" component={Withdraw} />
         <Route path="/balance/" component={Balance} />

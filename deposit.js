@@ -1,8 +1,8 @@
 function Deposit(){
+  const ctx = React.useContext(UserContext);
+  const [deposit, setDeposit] = React.useState('');
   const [show, setShow] = React.useState(true);
   const [status, setStatus] = React.useState('');
-  const [deposit, setDeposit] = React.useState('');
-  const ctx = React.useContext(UserContext);
 
   function validate(field, label){
     if (!field) {
@@ -16,7 +16,7 @@ function Deposit(){
   function handleAmountChange(){
     console.log(deposit);
     if (!validate(deposit,   'deposit'))  return;
-    ctx.users.push({balance:500});
+    ctx.users[0].balance += Number(deposit);
     setShow(false);
   }
 
@@ -32,10 +32,11 @@ function Deposit(){
     status={status}
     body={show ? (
       <>
-      Deposit<br/>
+      <form onSubmit={handleAmountChange}>
       <input type="input" className="form-control" id="deposit"
       placeholder="Deposit" value={deposit} onChange={e => setDeposit(e.
-        currentTarget.value)} /><br/>
+        currentTarget.value)} />
+        </form>
       </>
     ):(
       <>

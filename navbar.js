@@ -10,12 +10,11 @@ function NavBar(){
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div className="navbar-nav">
         <a className="nav-link active" aria-current="page" href="#">Home</a>
-        <a className="nav-link" href="#/CreateAccount/">Create Account</a>
-        <a className="nav-link" href="#/login/">Login</a>
+        <a className="nav-link" href="#/createaccount/">Create Account</a>
         <a className="nav-link" href="#/deposit/">Deposit</a>
         <a className="nav-link" href="#/withdraw/">Withdraw</a>
         <a className="nav-link" href="#/balance/">Balance</a>
-        <a className="nav-link" href="#/alldata/">Alldata</a>
+        <a className="nav-link" href="#/alldata/">AllData</a>
       </div>
     </div>
   </div>
