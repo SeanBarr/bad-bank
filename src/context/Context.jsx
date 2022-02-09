@@ -7,8 +7,8 @@ function useUserContext(){
 }
 
 function ContextProvider({ children }){
-    const [userLogIn, setUserLogIn] = useState({id: 1, name: "Sean", email: "test@test.com", password: "Password123!", balance: 100, isLoggedIn: false});
-    const [userList, setUserList] = useState([{id: 1, name: "Sean", email: "test@test.com", password: "Password123!", balance: 100, isLoggedIn: false}]);
+    const [userLogIn, setUserLogIn] = useState(null);
+    const [userList, setUserList] = useState([]);
     
     const signup = (name, email, password) => {
         let users = userList 

@@ -1,12 +1,12 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import LogIn from './pages/LogIn';
 import CreateAccount from './pages/CreateAccount';
+import LogIn from './pages/LogIn';
 import Home from "./pages/Home";
 import Deposit from './pages/Deposit';
 import Withdraw from './pages/Withdraw';
 import AllData from './pages/AllData';
+import Footer from "./components/Footer";
 import NotFound from './pages/NotFound';
 
 const App = () => {

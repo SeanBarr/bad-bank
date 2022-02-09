@@ -7,9 +7,9 @@ const Card = (props) => {
 
     return (
        <div className={classes()}>
-           <div className="card-header">{props.header}</div>
+           <h1 className="card-header fs-5">{props.header}</h1>
            <div className="card-body">
-               {props.title && (<h5 className="card-title">{props.title}</h5>)}
+               {props.title && (<h2 className="card-title">{props.title}</h2>)}
                {props.text && (<p className="card-text">{props.text}</p>)}
                {props.body}
 

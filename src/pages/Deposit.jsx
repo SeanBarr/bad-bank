@@ -11,15 +11,15 @@ const Deposit = () => {
   const [isEnabled, setEnabled] = useState(false);
   const [error, setError] = useState(null);
 
-  function validate(){
-      if ((/^[-]/.test(deposit.current.value))) {
+  function validate () {
+      if (deposit.current.value === '') {
       setError('Stop, you are depositing a negative amount! ');
       setTimeout(() => {
       setError(null)
       }, 2500);
       return false
       }
-    if (!(/^[1-9]+$/.test(deposit.current.value))) {
+    if (!(/^[0-9]+$/.test(deposit.current.value))) {
       setError('Input must be a Number! ');
       setTimeout(() => {
       setError(null)
@@ -41,11 +41,12 @@ const Deposit = () => {
   const clearForm = () => {
     deposit.current.value = '';
     setError(null)
+    isEnabled(true)
     }
 
   function closeModal(){
-    setModal(false);
-    clearForm();
+    setModal(false)
+    clearForm()
   }
 
   return(

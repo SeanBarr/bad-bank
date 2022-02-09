@@ -5,7 +5,7 @@ import Card from '../components/Card';
 import { BsFillEyeFill, BsFillEyeSlashFill } from 'react-icons/bs';
 
   const LogIn = () => {
-    const { userLogIn, logIn } = useUserContext()
+    const { logIn, userLogIn  } = useUserContext()
     const email = useRef()
     const password = useRef()
     const [isHidden, setIsHidden] = useState(true)
@@ -19,7 +19,7 @@ import { BsFillEyeFill, BsFillEyeSlashFill } from 'react-icons/bs';
     }
     
     const validateLogInForm = () => {
-    if (!(email.current.value.match(/^(([^<>()[]\.,;:\s@"]+(.[^<>()[]\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/))) {
+    if (!(email.current.value.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/))) {
     setEmailError('Please enter a valid email address!');
     error = true;
     setTimeout(() => {
@@ -51,12 +51,13 @@ import { BsFillEyeFill, BsFillEyeSlashFill } from 'react-icons/bs';
     <Card
     bgcolor="light"
     txtcolor="dark"
-    header="Login"
+    header="Log In"
     body={(
     <form onSubmit={handleLogIn} className="form-md row gy-3 needs-validation" noValidate>
     <div className="col-12 position-relative mb-3">
     <label htmlFor="email" className="form-label">Email</label>
-    <input type="email" className={emailError ? "form-control is-invalid" : "form-control"} id="email" ref={email} aria-describedby="emailValidationFeedback" required />
+    <input type="email" className={emailError ? "form-control is-invalid" : "form-control"} 
+    id="email" ref={email} aria-describedby="emailValidationFeedback" required />
     <div id="emailValidationFeedback" className="invalid-tooltip">{emailError}</div>
     </div>
     <div className="col-12 mb-4">

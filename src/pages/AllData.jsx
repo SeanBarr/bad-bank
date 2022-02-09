@@ -23,7 +23,7 @@ const AllData = () => {
   return (
     <>
     {userLogIn?
-    <Card bgcolor="primary" txtcolor="light" header="All Data" 
+    <Card bgcolor="primary" txtcolor="light" header="All the Data" 
     body={(
       <table className="table table-bordered">
       <thead>
