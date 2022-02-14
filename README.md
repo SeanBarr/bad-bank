@@ -54,7 +54,7 @@ Track User Submissions: All user submissions appear on All Data page.
 All Data Displayed On Bootstrap Card: All Data is styled and displayed on a Bootstrap card instead of JSON.
 
 
-![BadBank preview picture](https://github.com/SeanBarr/bad-bank/blob/main/assets/preview.png?raw=true)
+![BadBank preview picture](https://github.com/SeanBarr/bad-bank/blob/main/images/preview.png?raw=true)
 
 Git Clone: 
 git clone github.com/SeanBarr/bad-bank.git
